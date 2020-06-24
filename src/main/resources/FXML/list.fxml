@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox minWidth="600.0" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="700.0">
+         <children>
+            <Button layoutX="611.0" layoutY="36.0" mnemonicParsing="false" onAction="#mainWindow" text="Main Window" AnchorPane.rightAnchor="27.0" />
+            <Button layoutX="51.0" layoutY="49.0" mnemonicParsing="false" onAction="#makeContact" text="Make Contact With Selected" />
+            <Button layoutX="279.0" layoutY="49.0" mnemonicParsing="false" onAction="#checkContact" text="Check Contacts With Slected" />
+         </children></AnchorPane>
+      <HBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="table" prefHeight="100.0" prefWidth="600.0">
+              <columns>
+                 <TableColumn fx:id="name" prefWidth="122.0" text="name" />
+                 <TableColumn fx:id="last" prefWidth="139.0" text="last name" />
+                  <TableColumn fx:id="email" prefWidth="87.0" text="email" />
+                  <TableColumn fx:id="phone" prefWidth="255.0" text="phone" />
+                  <TableColumn fx:id="id" prefWidth="247.0" text="id" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding></HBox>
+      <VBox>
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+               <padding>
+                  <Insets left="15.0" right="15.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="nameLabel" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="25.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Last Name" />
+                        <TextField fx:id="lastLabel" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="125.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Email" />
+                        <TextField fx:id="emailLabel" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="225.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Phone" />
+                        <TextField fx:id="phoneLabel" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="325.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#updateTable" text="Search">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#load" text="Load Table">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="nameLabel1" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="25.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Last Name" />
+                        <TextField fx:id="lastLabel1" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="125.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Email" />
+                        <TextField fx:id="emailLabel1" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="225.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Phone" />
+                        <TextField fx:id="phoneLabel1" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="325.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <children>
+                        <Label text="Company" />
+                        <ComboBox fx:id="companyList" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#add" text="Add">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
